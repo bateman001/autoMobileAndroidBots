@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 cron.schedule("*/30 * * * *", () => {
-    console.log("running every hour");
+    console.log("running every 30 minutes");
     shell.exec("npm run first");
 });
 
