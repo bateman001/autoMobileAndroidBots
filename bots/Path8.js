@@ -17,12 +17,27 @@ describe("Path8: Add Product -> Cart > Checkout > Success", () => {
         await browser.pause(1000);
     });
 
-    it("can fill in first and last name", async () => {
+    it("can fill billing info", async () => {
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/checkout_first_name");
         await Page.sendKeys("Fruit Clicker");
 
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/checkout_last_name");
         await Page.sendKeys("Buyer");
+
+        await Page.hideKeyboard();
+
+        await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/checkout_address_1");
+        await Page.sendKeys("123 Produce Aisle Ave");
+
+        await Page.hideKeyboard();
+
+        await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/checkout_city");
+        await Page.sendKeys("Fruitville");
+
+        await Page.hideKeyboard();
+
+        await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/tv_checkout_zip");
+        await Page.sendKeys("80201");
 
         await Page.hideKeyboard();
     });
