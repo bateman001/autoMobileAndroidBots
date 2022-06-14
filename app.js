@@ -5,7 +5,7 @@ const shell = require("shelljs");
 const app = express();
 const PORT = 3000;
 
-cron.schedule("* * * * *", () => {
+cron.schedule("*/30 * * * *", () => {
     console.log("running every 5 minutes");
     shell.exec("npm run first");
 });
