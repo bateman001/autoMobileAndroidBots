@@ -23,7 +23,7 @@ exports.config = {
             name: path.name,
             device: device.device,
             os_version: device.os,
-            app: process.env.BROWSERSTACK_TESTING_APP_ID,
+            app: process.env.BROWSERSTACK_APP_ID,
             "browserstack.debug": true
         }
     ],
