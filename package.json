@@ -19,6 +19,7 @@
         "webdriverio",
         "browserstack",
         "appium",
+        "heroku",
         "tests"
     ],
     "bugs": {
