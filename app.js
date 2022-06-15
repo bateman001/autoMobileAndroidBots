@@ -1,4 +1,5 @@
 const express = require("express");
+require("newrelic");
 const cron = require("node-cron");
 const shell = require("shelljs");
 
