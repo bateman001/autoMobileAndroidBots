@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const host = "0.0.0.0";
 
 console.log("will start in 15 minutes");
-cron.schedule("*/5 * * * *", () => {
+cron.schedule("*/20 * * * *", () => {
     console.log("running every 20 minutes");
     shell.exec("npm run first");
 });
