@@ -6,8 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const host = "0.0.0.0";
 
-cron.schedule("*/15 * * * *", () => {
-    console.log("running every 5 minutes");
+cron.schedule("*/20 * * * *", () => {
+    console.log("running every 20 minutes");
     shell.exec("npm run first");
 });
 
