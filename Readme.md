@@ -7,7 +7,12 @@ Welcome to the project for running mobile bots over Fruit Shoppe.
 1. run `npm install`
 2. set up Browserstack account
 3. run `touch .env` file
-4. upload sdk to Browserstack https://www.browserstack.com/docs/app-automate/espresso/upload-app-from-filesystem
+4. upload sdk to Browserstack
+    ```
+    curl -u "YOUR_BROWSERSTACK_USERNAME:YOUR_BROWSERSTACK_ACCESS_KEY" \
+    -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
+    -F "file=@/path/to/apk/file"
+    ```
 5. input these credentials into `.env` file with
 
     ```
